@@ -1,0 +1,17 @@
+extends layout
+
+block content
+	h1= title
+	table.table.table-bordered
+		thead
+			tr 
+				th Username
+				th Create
+				th Email
+		tbody
+			- for(var user in data)
+				tr 
+					td
+						a(href="/user/"+data[user].key)=data[user].username
+					td=data[user].createdAt
+					td=data[user].email

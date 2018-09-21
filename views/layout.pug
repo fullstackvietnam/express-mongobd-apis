@@ -1,0 +1,19 @@
+doctype html
+html
+	head
+		title #{title} - FullStack Vietnam
+		link(rel='stylesheet', href='/css/style.css')
+	body
+		main 
+			.container.mt-3
+				.row
+					.col-sm-3
+						.list-group
+							a.list-group-item.list-group-item-action(href="/") Index
+							a.list-group-item.list-group-item-action(href="/news") News
+							a.list-group-item.list-group-item-action(href="/users") Users
+							a.list-group-item.list-group-item-action(href="/form") Form
+							a.list-group-item.list-group-item-action(href="/formnews") Form News
+					.col
+						block content
+		script(src="/js/main.js")

@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	h1= title
+	form(method="POST", action="/savenews", enctype="multipart/form-data")
+		.form-group
+			input.form-control(name="Title" placeholder="Title")
+		.form-group
+			textarea.form-control(name="Desc")
+		.form-group
+			input(name="imgUploader" type="file")
+		.form-group
+			button.btn.btn-primary(type="submit") Thêm mới

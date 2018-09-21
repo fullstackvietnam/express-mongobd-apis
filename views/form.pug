@@ -1,0 +1,17 @@
+extends layout
+
+block content
+	h1= title
+	form(method="POST", action="/save", enctype="multipart/form-data")
+		.form-group
+			input.form-control(name="Username" placeholder="Username")
+		.form-group
+			input.form-control(name="Password" placeholder="Password")
+		.form-group
+			input.form-control(name="RePassword" placeholder="Re-type Password")
+		.form-group
+			input.form-control(name="EmailAddress" placeholder="Email")
+		.form-group
+			input(name="imgUploader" type="file")
+		.form-group
+			button.btn.btn-primary(type="submit") Thêm mới

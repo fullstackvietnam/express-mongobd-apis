@@ -1,0 +1,7 @@
+extends layout
+
+block content
+	- for(var news in data)
+		a(href="/newsdetails/"+data[news].key)=data[news].username
+			h3=data[news].title
+		p=data[news].desc
